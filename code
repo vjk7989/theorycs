@@ -47,10 +47,10 @@ print(l,"\n")
 ############################
 
 
-print("Que -5)")'''
+print("Que -5)")
 
 ############################
-'''
+
 colors = {'red','orange','white','black','blue','indigo'}
 
 rainbow = {'violet','red', 'orange', 'yellow', 'green', 'blue', 'indigo'}
@@ -69,8 +69,7 @@ if (Sum == Number):
     print(" %d is a Perfect Number" %Number)
 else:
     print(" %d is not a Perfect Number" %Number)
-'''
-'''
+
 n = int(input("Enter the value : "))
 full = {'a'}
 full.remove('a')
@@ -87,4 +86,4 @@ for N in range(1, n-1):
         
     if s == N:    
         full1.add(N)
-print(full1) 
+print(full1)        
