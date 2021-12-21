@@ -63,7 +63,46 @@ print("intersection of two sets\n",intersectioN)
 
 symmetric = rainbow.symmetric_difference(colors)
 print("symmetric_difference of two sets\n",symmetric)
+###############################
+n = int(input("Enter the value : "))
+full = {'a'}
+full.remove('a')
+for p in range(n+1):
+    full.add(p)
 
+
+for i in range(1,n+1):
+    r = 0
+    for j in range(1,i):
+        if (i%j) == 0:
+            r = r +j 
+    
+    if i == r:
+        
+        full.discard(i)
+print(full) 
+######################################
+n = int(input("Enter the value : "))
+full = {'a'}
+full.remove('a')
+llu = n 
+for p in range(llu+1):
+    full.add(p)
+
+
+for num in range(1, n + 1):
+    temp = num
+    r = 0
+    
+    while(temp > 0):
+        Reminder = temp % 10
+        r = (r * 10) + Reminder
+        temp = temp //10
+
+    if(num == r):
+        full.remove(num)
+print(full)
+######################################
 '''
 if we don't have the element the ,remove() method will show an error, 
 .discard() won't show any error if the element is not in the set.
