@@ -1,0 +1,90 @@
+KrishnA = {'a'}
+temp = KrishnA
+KrishnA.remove('a')     #added and removed since empty set is treated as dictionary by python
+for i in range(1,53+1):
+    KrishnA.add(i)
+print("Que -1)")    
+print(KrishnA,"\n")
+###
+
+KrishnA1 = {'a'}      # prime set = KrishnA1
+KrishnA1.remove('a')
+Number = 1    
+for j in KrishnA:
+    while(Number <= j):
+        count = 0
+        i = 2
+    
+        while(i <= Number//2):
+            if(Number % i == 0):
+                count = count + 1
+                break
+            i = i + 1
+
+        if (count == 0 and Number != 1):
+            KrishnA1.add(Number)
+        Number = Number  + 1
+print("Que -2)")    
+print(KrishnA1,"\n")
+
+############################
+
+odd = {'a'}
+odd.remove('a')
+
+for k in temp:
+    if k%2 !=0:
+        odd.add(k)
+print("Que -3)")        
+print(odd,"\n")
+
+############################
+
+l = KrishnA.intersection(odd)
+print("Que -4)")
+print(l,"\n")
+
+############################
+
+
+print("Que -5)")'''
+
+############################
+'''
+colors = {'red','orange','white','black','blue','indigo'}
+
+rainbow = {'violet','red', 'orange', 'yellow', 'green', 'blue', 'indigo'}
+
+unioN = colors.union(rainbow)
+print("union of two sets\n",union)
+
+intersectioN =  rainbow.intersection(colors)
+print("intersection of two sets\n",intersectioN)
+
+symmetric = rainbow.symmetric_difference(colors)
+print("symmetric_difference of two sets\n",symmetric)
+
+###############################################
+if (Sum == Number):
+    print(" %d is a Perfect Number" %Number)
+else:
+    print(" %d is not a Perfect Number" %Number)
+'''
+'''
+n = int(input("Enter the value : "))
+full = {'a'}
+full.remove('a')
+full1 = {'a'}
+full1.remove('a')
+
+
+s = 0
+for N in range(1, n-1):
+    for n in range(1,N-1):
+    
+        if(N % n == 0):
+            s = s + n
+        
+    if s == N:    
+        full1.add(N)
+print(full1) 
