@@ -63,3 +63,8 @@ print("intersection of two sets\n",intersectioN)
 
 symmetric = rainbow.symmetric_difference(colors)
 print("symmetric_difference of two sets\n",symmetric)
+
+'''
+if we don't have the element the ,remove() method will show an error, 
+.discard() won't show any error if the element is not in the set.
+ '''
