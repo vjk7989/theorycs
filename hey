@@ -1,3 +1,5 @@
+import time
+
 import pyttsx3 #pip install pyttsx3
 import speech_recognition as sr #pip install speechRecognition
 import datetime
@@ -5,7 +7,7 @@ import wikipedia #pip install wikipedia
 import webbrowser
 import os
 import smtplib
-
+import pyautogui
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[0].id)
@@ -27,7 +29,8 @@ def wishMe():
     else:
         speak("Good Evening!,don't you have any other work")
 
-    speak("I am viki, Boss Please tell me how may I replace alexa")
+    speak("I am JARVIS, Boss Please tell me how may I replace alexa")
+    #speak("I am JARVIS, why do you need an AI, are you this lazy , can't you do on your own , anyway now tell what should I do")
 
 def takeCommand():
     #It takes microphone input from the user and returns string output
@@ -60,7 +63,8 @@ def sendEmail(to, content):
 
 if __name__ == "__main__":
     wishMe()
-    while True:
+    x = True
+    while x:
     # if 1:
         query = takeCommand().lower()
 
@@ -85,8 +89,13 @@ if __name__ == "__main__":
             webbrowser.open("https://www.instagram.com/")
 
 
-        elif 'play music' in query:
-            pass
+        elif 'music' in query:
+            os.system('start spotify.exe && exit')
+            time.sleep(10)
+
+
+            pyautogui.press('space')
+
 
         elif 'the time' in query:
             strTime = datetime.datetime.now().strftime("%H:%M:%S")
@@ -106,4 +115,7 @@ if __name__ == "__main__":
                 speak("Email has been sent!")
             except Exception as e:
                 print(e)
-                speak("you jack ass email is not been sent fk off")
+                speak("you jack ass, email is not been sent fuccck off")
+
+        #elif 'stop' in query:
+            #x = False
