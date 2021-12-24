@@ -96,7 +96,8 @@ if __name__ == "__main__":
 
             pyautogui.press('space')
 
-
+        elif 'outside' in query:
+            speak('If you want you can. please dont ask me these qustions I am meant for something big like my boss')
         elif 'the time' in query:
             strTime = datetime.datetime.now().strftime("%H:%M:%S")
             speak(f"Sir, the time is {strTime}")
