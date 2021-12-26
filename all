@@ -1,0 +1,358 @@
+
+KrishnA = {'a'}
+temp = KrishnA
+KrishnA.remove('a')     #added and removed since empty set is treated as dictionary by python
+for i in range(1,53+1):
+    KrishnA.add(i)
+print("Que -1)")    
+print(KrishnA,"\n")
+
+#------------------------------------------
+
+KrishnA = {'a'}
+temp = KrishnA
+KrishnA.remove('a')     #added and removed since empty set is treated as dictionary by python
+for i in range(1,53+1):
+    KrishnA.add(i)
+print("Que -1)")    
+print(KrishnA,"\n")
+
+KrishnA1 = {'a'}      # prime set = KrishnA1
+KrishnA1.remove('a')
+Number = 1    
+for j in KrishnA:
+    while(Number <= j):
+        count = 0
+        i = 2
+    
+        while(i <= Number//2):
+            if(Number % i == 0):
+                count = count + 1
+                break
+            i = i + 1
+
+        if (count == 0 and Number != 1):
+            KrishnA1.add(Number)
+        Number = Number  + 1
+print("Que -2)")    
+print(KrishnA1,"\n")
+
+#------------------------------------------------
+
+KrishnA = {'a'}
+temp = KrishnA
+KrishnA.remove('a')     #added and removed since empty set is treated as dictionary by python
+for i in range(1,53+1):
+    KrishnA.add(i)
+print("Que -1)")    
+print(KrishnA,"\n")
+
+odd = {'a'}
+odd.remove('a')
+
+for k in temp:
+    if k%2 !=0:
+        odd.add(k)
+print("Que -3)")        
+print(odd,"\n")
+
+#----------------------------------------------
+
+KrishnA = {'a'}
+temp = KrishnA
+KrishnA.remove('a')                                        
+for i in range(1,53+1):
+    KrishnA.add(i)
+print("Que -1)")    
+print(KrishnA,"\n")
+odd = {'a'}
+odd.remove('a')
+for k in temp:
+    if k%2 !=0:
+        odd.add(k)
+print("Que -3)")        
+print(odd,"\n")
+l = KrishnA.intersection(odd)
+print("Que -4)")
+print(l,"\n")
+
+#----------------------------------------------
+
+print("Que -5)")
+colors = {'red','orange','white','black','blue','indigo'}
+print(colors)
+
+#-----------------------------------------
+
+print("Que -6)")
+rainbow = {'violet','red', 'orange', 'yellow', 'green', 'blue', 'indigo'}
+print(rainbow)
+
+#-------------------
+
+print("Que -7)")
+colors = {'red','orange','white','black','blue','indigo'}
+
+rainbow = {'violet','red', 'orange', 'yellow', 'green', 'blue', 'indigo'}
+
+unioN = colors.union(rainbow)
+print("union of two sets\n",unioN)
+
+intersectioN =  rainbow.intersection(colors)
+print("intersection of two sets\n",intersectioN)
+
+symmetric = rainbow.symmetric_difference(colors)
+print("symmetric_difference of two sets\n",symmetric)
+
+#----------------------------------------------
+
+n = int(input("Enter the value : "))
+full = {'a'}
+full.remove('a')
+for p in range(n+1):
+    full.add(p)
+
+
+for i in range(1,n+1):
+    r = 0
+    for j in range(1,i):
+        if (i%j) == 0:
+            r = r +j 
+    
+    if i == r:
+        
+        full.discard(i)
+print(full)
+
+#---------------------------------------------------
+
+n = int(input("Enter the value : "))
+full = {'a'}
+full.remove('a')
+llu = n 
+for p in range(llu+1):
+    full.add(p)
+for num in range(1, n + 1):
+    temp = num
+    r = 0
+    while(temp > 0):
+        Reminder = temp % 10
+        r = (r * 10) + Reminder
+        temp = temp //10
+    if(num == r):
+        full.remove(num)
+print(full)
+
+#-------------------------------------------
+
+l0 = []
+reg= int(input("Enter the registeration number : "))
+n = int(input("no of elements : "))
+for i in range(n):
+    elmt = input("Enter food item : ")
+    l0.append(elmt)
+lk = []
+for i in range(n):
+    p = reg+i 
+    lk.append(p)
+z = zip(lk,l0)
+tp1 = tuple(z)
+tp = list(tp1)
+def so(tp):
+    tp.sort(key = lambda a: a[1]) 
+    return tp
+z1 = so(tp)
+print(tuple(z1))
+
+#-----------------------------------
+
+ls = (1,2,3,2609,202,7981,23,1232123,-2,-231)
+ls1 = []
+for i in range(len(ls)):
+    if ls[i]>0 and ls[i] %2 == 0:
+       ls1.append(ls[i])
+print(tuple(ls1))       
+
+#-------------------------------
+
+n = int(input('enter a value of n: '))
+print("\n------------------------------------------------\n")
+l1 = [x for x in range(2, (2*(n)) + 1, 2)]
+l2 = [x for x in range(3, (3*(n+1))+ 1, 3)]
+l3 = [x for x in range(5, (5*(n+2))+ 1, 5)]
+l4 = [x for x in range(6, (6*(n+3))+ 1, 6)]
+t1 = tuple(l1)
+t2 = tuple(l2)
+t3 = tuple(l3)
+t4 = tuple(l4)
+t = (t1, t2, t3, t4)
+print("the nested tuple is \n(")
+for i in t:
+    print(i)
+print(")")
+print("\n---------------------------------------\n")
+print('the sum of elements in each inner tuple are:\n(')
+for i in t:
+    sum = 0
+    for j in i:
+        sum += j
+    print(sum)
+print(')')
+print("\n---------------------------------------------\n")
+print("the maximum number in each inner tuple are:\n(")
+for i in t:
+    a = list(i)
+    print(max(a))
+print(")")
+print("\n-------------------------------------\n")
+
+#----------------------------------------------------
+
+we don’t want to change them.
+# access of tuple elements using the slice
+tp = (2,6,0,9,7553,2609,0,2609,202,7981)
+print(tp[2:])
+# adding two tuples
+tp1 = (87,2121,31,2022)
+print(tp+tp1)
+# finding the index of a tuple
+x = tp.index(2609)
+print(x)
+# counting elements in a tuple 
+y = tp.count(2609)
+print(y)
+# deleting a tuple 
+del tp1
+
+#--------------------------------------------
+
+n = int(input("Enter the value : "))
+for N in range (1, n+1):
+    count = 0
+    for i in range(2, (N//2 + 1)):
+        if(N % i == 0):
+            count += 1
+            break
+
+    if (count == 0 and N != 1):
+        print(N, end = ' ')
+
+#-------------------------------------------
+
+Python program to compute HCF and LCM of 2 numbers.
+num1 = int(input("Enter the first number : "))
+num2 = int(input("Enter the second number : "))
+if num1 > num2:
+  num1, num2 = num2, num1
+for i in range(1,num1+1):
+  if num1%i == 0 and num2%i == 0:
+    hcf = i
+
+print("HCF is : ", hcf)
+
+lcm = (num1*num2)/hcf
+print('LCM is : ',lcm)
+
+#--------------------------------------------------
+
+ls = [2,45,34,32,1212,22,22,2]
+length = len(ls)
+
+for i in range (length - 1):
+    for j in range (length - 1):
+        if ls[j]>ls[j+1]:
+            ls[j],ls[j+1] = ls[j+1],ls[j]
+        else :
+            ls = ls
+    
+if ls[-1]== ls[-2] :
+    print("First best score : ",ls[-1],"Second best score : ",ls[-3])
+else:
+    print("First best score : ",ls[-1],"Second best score : ",ls[-2])
+
+#-------------------------------------
+
+#including B 
+num = '21BCE7553'
+for i in num:
+    print(i,end='')
+    if i == 'B':
+        break
+        
+#-------------------------------------        
+
+# excluding B 
+num = '21BCE7553'
+for i in num:
+    if i != 'B':
+        print(i,end='')
+    else:
+        break
+
+#-------------------------------------
+
+num = '21BCE7553'
+for i in range(5,len(num)):
+    print(num[i],end='')
+
+#----------------------------
+
+branch = 'ComputerScience'
+mi = int(len(branch) )
+mi1 = mi/2
+for i in range(int(mi1),int(mi1+3)):
+    print(branch[i],end = '')
+
+#-----------------------------------
+
+num = '21BCE7553'
+for i in range(0,len(num),2):
+    print(num[i],end='')
+
+#--------------------------------------
+
+num = '21BCE7553'
+for i in range(1,len(num)-1,2):
+    print(num[i],end='')
+
+#----------------------------------------
+
+#including B 
+print("a)")
+num = '21BCE7553'
+for i in num:
+    print(i,end='')
+    if i == 'B':
+        break
+print("\n")    
+# excluding B 
+num = '21BCE7553'
+for i in num:
+    if i != 'B':
+        print(i,end='')
+    else:
+        break 
+print("\n") 
+print("b)") 
+num = '21BCE7553'
+for i in range(5,len(num)):
+    print(num[i],end='') 
+print("\n")     
+print("c)")
+branch = 'ComputerScience'
+mi = int(len(branch) )
+mi1 = mi/2
+for i in range(int(mi1),int(mi1+3)):
+    print(branch[i],end = '')
+print("\n")
+print("d)")
+num = '21BCE7553'
+for i in range(0,len(num),2):
+    print(num[i],end='')
+print("\n")
+print("e)")
+num = '21BCE7553'
+for i in range(1,len(num)-1,2):
+    print(num[i],end='') 
+
+        
